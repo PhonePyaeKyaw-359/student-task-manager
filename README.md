@@ -25,9 +25,9 @@ Do not publish database credentials or real task data. `database.sql` contains o
 
 ## Requirements covered
 
-The app uses HTML forms and GET/POST requests, server-side validation, PDO, prepared statements for user-provided values, SQL SELECT/INSERT/UPDATE/DELETE, reusable functions, arrays, conditionals, loops, sessions, and `htmlspecialchars()` for displayed user content. The current additional feature is a filter for incomplete tasks.
+The app uses HTML forms and GET/POST requests, server-side validation, PDO, prepared statements for user-provided values, SQL SELECT/INSERT/UPDATE/DELETE, reusable functions, arrays, conditionals, loops, sessions, and `htmlspecialchars()` for displayed user content. It also filters incomplete tasks and sorts tasks by due date. Dated tasks appear earliest first, and tasks without a due date appear last.
 
-The exam brief leaves the individually assigned challenge blank. Confirm the challenge with your instructor and replace or extend the incomplete-task filter if a different challenge was assigned.
+The sort by due date is implemented in `index.php`. Confirm that this matches the challenge assigned by your instructor; if a different challenge was assigned, update the application accordingly.
 
 ## Student details
 
@@ -40,16 +40,16 @@ Student ID: 202300359
 AI tool(s) used: OpenAI Codex
 
 Three examples of how AI helped me:
-1. It helped organize the project files around the PHP CRUD requirements.
-2. It suggested using PDO prepared statements for database input.
-3. It helped review the project against the exam brief.
+1. It helped me compare the application with the exam requirements and identify the required PHP and database features.
+2. It explained how PDO prepared statements help safely use values entered in forms.
+3. It helped me configure a Laragon setup guide and keep local database credentials out of the GitHub repository.
 
 One AI-generated suggestion or piece of code that I changed or rejected:
 
-What was it? ______________________________________________
+What was it? I changed the database setup so the real credentials stay in my local `db.php`, which Git ignores, while the repository contains only `db.example.php`.
 
-Why did I change or reject it? _______________________________
+Why did I change or reject it? This keeps a real database password out of GitHub and still gives me a simple template to set up the project on another computer.
 
-The part of this application I understand least: _______________
+The part of this application I understand least: I need more practice understanding how PDO uses the MySQL username and password to connect to the database.
 
-Complete the student details and reflection honestly. Before submission, verify the app with your exam database settings and make sure you can explain and modify the code independently during the code defense.
+Before submission, verify the app with your exam database settings and make sure you can explain and modify the code independently during the code defense.
