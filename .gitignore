@@ -1,0 +1,9 @@
+# Local database credentials
+/db.php
+
+# Local logs and editor files
+*.log
+.idea/
+.vscode/
+Thumbs.db
+Desktop.ini
